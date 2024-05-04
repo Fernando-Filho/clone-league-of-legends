@@ -14,7 +14,7 @@ function constroiURL() {
         .options[document.getElementById("select-sorting-method").selectedIndex]
         .value;
     if (name.length == 0 && filtersRole.length == 0 && !sale.checked) {
-        url += `&sort=${sortingMethod}`;
+        url += `&sale=false&sort=${sortingMethod}`;
         console.log(url);
         return url;
     }

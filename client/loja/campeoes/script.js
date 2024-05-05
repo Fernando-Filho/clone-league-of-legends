@@ -1,3 +1,27 @@
+var tokenJWT = "";
+
+async function carregarTokenEChamps() {
+    let url = "http://localhost:8080/login";
+    let dados = {
+        login: "admin",
+        senha: "admin",
+    };
+    const response = await fetch(url, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dados),
+    });
+
+    const json = await response.json();
+
+    tokenJWT = await json.token;
+
+    await carregarChamps();
+}
+
 function constroiURL() {
     let url = "http://localhost:8080/champ?size=200";
     let name = document.getElementById("input-search-champ").value;
@@ -47,7 +71,13 @@ function constroiURL() {
 }
 
 async function carregarChamps() {
-    const dados = await fetch(constroiURL());
+    const dados = await fetch(constroiURL(), {
+        method: "GET",
+        headers: {
+            Authorization: `Bearer ${tokenJWT}`,
+        },
+    });
+
     const json = await dados.json();
     const data = await json.content;
 
@@ -87,4 +117,4 @@ let elementTriggerEventSearch = document.getElementById("input-search-champ");
 
 elementTriggerEventSearch.addEventListener("input", carregarChamps);
 
-window.addEventListener("load", carregarChamps());
+window.addEventListener("load", carregarTokenEChamps());

@@ -94,8 +94,14 @@ async function carregarChamps() {
                                             <p class="preco-ea">${champ.eaPrice}</p>
                                         </span>
                                     </div>
-                                </div>`;
+                                </div>` 
     });
+};
+
+let elementsTriggerEventCheckbox = document.getElementsByClassName("input-checkbox");
+
+for(let i = 0; i < elementsTriggerEventCheckbox.length; i++){
+    elementsTriggerEventCheckbox[i].addEventListener('click', carregarChamps);
 }
 
 let elementsTriggerEventCheckbox =

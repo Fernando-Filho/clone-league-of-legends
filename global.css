@@ -21,10 +21,6 @@ p {
     margin: 0;
 }
 
-.fs-7 {
-    font-size: 14px;
-}
-
 ul {
     list-style: none;
     padding: 0;
@@ -49,14 +45,16 @@ button {
     height: 576px;
     margin: auto;
     background-color: #010a13;
-    font-family: "Beaufort for LOL";
+    font-family: "Beaufort for LOL", serif;
 }
 
+a,
 select,
 input,
 card,
-p:not(.rp, .essencia-azul, .p-social),
+p:not(.rp, .essencia-azul, .social_titulo),
 label {
     font-family: "Lexend Deca", sans-serif;
     font-weight: 600;
+    margin: 0;
 }

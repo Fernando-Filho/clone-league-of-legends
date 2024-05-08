@@ -81,27 +81,28 @@ async function carregarChamps() {
     const json = await dados.json();
     const data = await json.content;
 
-    const divChamps = document.getElementById("grid-campeoes");
+    const divChamps = document.getElementById("campeoes-grid");
     divChamps.style.overflowY = "scroll";
     divChamps.innerHTML = "";
     data.forEach((champ) => {
         divChamps.innerHTML += `<div class="card">
                                     <img src="${champ.image}" width="240" height="240" alt="${champ.name}">
-                                    <div class="card-info-bg">
+                                    <div class="card-sombraTitulo position-absolute d-flex align-items-center justify-content-end flex-column">
                                         <p class=" text-capitalize">${champ.name}</p>
-                                        <span id="precos-box">
-                                            <p class="preco-rp">${champ.rpPrice}</p>
-                                            <p class="preco-ea">${champ.eaPrice}</p>
+                                        <span id="card-precos">
+                                            <p class="card-precos_rp">${champ.rpPrice}</p>
+                                            <p class="card-precos_ea">${champ.eaPrice}</p>
                                         </span>
                                     </div>
-                                </div>` 
+                                </div>`;
     });
-};
+}
 
-let elementsTriggerEventCheckbox = document.getElementsByClassName("input-checkbox");
+let elementsTriggerEventCheckbox =
+    document.getElementsByClassName("input-checkbox");
 
-for(let i = 0; i < elementsTriggerEventCheckbox.length; i++){
-    elementsTriggerEventCheckbox[i].addEventListener('click', carregarChamps);
+for (let i = 0; i < elementsTriggerEventCheckbox.length; i++) {
+    elementsTriggerEventCheckbox[i].addEventListener("click", carregarChamps);
 }
 
 let elementsTriggerEventCheckbox =

@@ -37,8 +37,15 @@
     </head>
 
     <body onselectstart="return false">
+        <div class="mensagemAlerta background-blur text-white align-items-center justify-content-center position-absolute w-100 h-100">
+            <p class="text-center fs-5 m-3">
+                Opa! Parece que a largura da tela que você está usando é menor
+                que a recomendada. Ajuste sua tela para no mínimo 1000px de
+                largura para continuar.
+            </p>
+        </div>
         <main class="main client">
-            <header class="header-client d-flex justify-content-between">
+            <header class="client_header d-flex justify-content-between px-3">
                 <div style="color: #d2c195" class="d-flex align-items-center">
                     <img
                         class="links-desabilitados mr-2"
@@ -106,23 +113,27 @@
                     style="width: 200px"
                     class="d-flex align-items-center gap-1"
                 >
-                    <img class="links-desabilitados"
+                    <img
+                        class="links-desabilitados"
                         width="55"
                         src="./img/header/icone-perfil.png"
                         alt="Nível de invocador: 245"
                     />
                     <div>
                         <h2
-                            class="fs-7"
                             style="
                                 color: #f9f9f9;
                                 margin-bottom: 2px;
                                 margin-left: 2px;
+                                font-size: 14px;
                             "
                         >
                             Rakänbole
                         </h2>
-                        <p style="font-size: 12px" class="links-desabilitados status online">
+                        <p
+                            style="font-size: 12px"
+                            class="links-desabilitados status online"
+                        >
                             "tudo jóia?"
                         </p>
                     </div>
@@ -141,32 +152,36 @@
                 </nav>
             </div>
 
-            <div class="geral position-relative">
+            <div class="inicio_outroCeu position-relative w-100 h-100">
                 <div
                     id="carrossel"
                     class="carousel slide"
                     data-bs-ride="carousel"
                 >
-                    <div class="carousel-inner carrossel-inicio">
+                    <div class="carousel-inner carrossel-outroCeu">
                         <!-- PRIMEIRO -->
                         <div class="carousel-item active">
-                            <div class="desenvolvido">
-                                <p class="direitos">
+                            <div class="carousel-paragrafo background-blur text-white">
+                                <p class="carousel-paragrafo_direitos">
                                     Este é um projeto apenas para fins
-                                    educacionais. Foi criado apenas para testar
-                                    nossas habilidades Front/Back-End. Todos os
+                                    educacionais. Foi criado para testar nossas
+                                    habilidades em Front/Back-End. Todos os
                                     direitos autorais e identidade da marca
                                     pertencem a Riot Games.
                                 </p>
                             </div>
                         </div>
                         <!-- SEGUNDO -->
-                        <div class="carousel-item devs">
-                            <div class="desenvolvido">
-                                <h2 class="fs-3 mb-3 fw-bold">
-                                    DESENVOLVIDO POR:
+                        <div class="carousel-item">
+                            <div
+                                class="carousel-desenvolvedores background-blur text-white"
+                            >
+                                <h2 class="fs-3 mb-3 fw-bold text-uppercase">
+                                    Desenvolvido por:
                                 </h2>
-                                <div class="info-devs"></div>
+                                <div
+                                    class="carousel-desenvolvedores_redesSociais"
+                                ></div>
                             </div>
                         </div>
                     </div>
@@ -182,29 +197,33 @@
                 <header
                     class="w-100 text-uppercase d-flex justify-content-between align-items-center"
                 >
-                    <p class="p-social">social</p>
+                    <p class="social_titulo">social</p>
 
                     <div>
-                        <img class="links-desabilitados"
+                        <img
+                            class="links-desabilitados"
                             src="./img/social/adicionar-icone.svg"
                             alt="Adicionar amigo"
                         />
-                        <img class="links-desabilitados"
+                        <img
+                            class="links-desabilitados"
                             src="./img/social/nova-pasta-icone.svg"
                             alt="Nova pasta"
                         />
-                        <img class="links-desabilitados"
+                        <img
+                            class="links-desabilitados"
                             src="./img/social/filtro-icone.svg"
                             alt="Filtrar"
                         />
-                        <img class="links-desabilitados"
+                        <img
+                            class="links-desabilitados"
                             src="./img/social/pesquisar-icone.svg"
                             alt="Pesquisar"
                         />
                     </div>
                 </header>
 
-                <div class="wrapper-pastas"></div>
+                <div class="social-pastas_wrapper"></div>
 
                 <footer class="d-flex justify-content-between">
                     <img

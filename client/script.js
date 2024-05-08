@@ -1,13 +1,13 @@
 const header = document.querySelector(".header");
 const listaClasses = header.classList;
-var conteudoGeral = document.querySelector(".geral");
+var conteudoGeral = document.querySelector(".inicio_outroCeu");
 var botaoInicio = document.querySelector(".botao-inicio").classList;
 var botaoLoja = document.querySelector(".botao-loja").classList;
 
 const devs = [
     {
         nome: "Mirella Naspolini",
-        usuario: "https://github.com/mirellanaspolini",
+        github: "https://github.com/mirellanaspolini",
         linkedin: "https://www.linkedin.com/in/mirellanaspolini-12768322b/",
     },
     {
@@ -19,12 +19,14 @@ const devs = [
 
 const printDevs = (lista) => {
     lista.forEach((dev) => {
-        document.querySelector(".info-devs").innerHTML += `<div class="devs">
-            <h3 style="margin-bottom: 6px;">${dev.nome}</h3>
-            <a href="${dev.github}" target="_blank">
+        document.querySelector(
+            ".carousel-desenvolvedores_redesSociais"
+        ).innerHTML += `<div class="text-center w-50">
+            <h3 class="fs-5 mb-1">${dev.nome}</h3>
+            <a class="fs-3" href="${dev.github}" target="_blank">
                 <i style="margin-right: 6px;" class="fab fa fa-github" aria-hidden="true"></i>
             </a>
-            <a href="${dev.linkedin}" target="_blank">
+            <a class="fs-3" href="${dev.linkedin}" target="_blank">
                 <i class="fab fa fa-linkedin-square" aria-hidden="true"></i>
             </a>
         </div>`;
@@ -50,18 +52,18 @@ function abrir_inicio() {
         <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
     </div>
-    <div class="carousel-inner carrossel-inicio">
+    <div class="carousel-inner carrossel-outroCeu">
         <!-- PRIMEIRO -->
         <div class="carousel-item active">
-            <div class="desenvolvido">
-                <p class="direitos">Este é um projeto apenas para fins educacionais. Foi criado apenas para testar nossas habilidades Front/Back-End. Todos os direitos autorais e identidade da marca pertencem a Riot Games.</p>
+            <div class="background-blur text-white">
+                <p class="carousel-paragrafo_direitos">Este é um projeto apenas para fins educacionais. Foi criado apenas para testar nossas habilidades Front/Back-End. Todos os direitos autorais e identidade da marca pertencem a Riot Games.</p>
             </div>
         </div>
         <!-- SEGUNDO -->
-        <div class="carousel-item ">
-            <div class="desenvolvido">
-                <h2 class="fs-3 mb-3 fw-bold">DESENVOLVIDO POR:</h2>
-                <div class="info-devs"></div>
+        <div class="carousel-item devs text-center w-50">
+            <div class="background-blur text-white">
+                <h2 class="fs-3 mb-3 fw-bold text-uppercase">Desenvolvido por:</h2>
+                <div class="carousel-desenvolvedores_redesSociais"></div>
             </div>
         </div>
     </div>
@@ -100,17 +102,17 @@ function abrir_loja_campeoes() {
 async function carregarSocial() {
     const dados = await fetch("./json/social.json");
     const json = await dados.json();
-    const wrapper = document.querySelector(".wrapper-pastas");
+    const wrapper = document.querySelector(".social-pastas_wrapper");
 
     const printaAmigos = (lista, pasta) => {
         Object.entries(lista).forEach(([key, value]) => {
             wrapper.querySelector(`#${pasta} ul`).innerHTML += `                
-            <li class="social-box">
-            <img width="36" class="social-img" src=${
+            <li class="pastas-invocador_wrapper">
+            <img width="36" class="pastas-invocador_icone" src=${
                 value.img
             } alt="Ícone do invocador">
             <div>
-            <p class="usuario-amigo" style="color: #929994;">${value.name}</p>
+            <p class="pastas-invocador_nome" style="color: #929994;">${value.name}</p>
         <p class="status ${statusCor(value.status)}">${value.status}</p>
                     </div>
                 </li>`;
@@ -152,7 +154,7 @@ const textoNav = () => {
 
 const statusCor = (value) => {
     if (value === "Em partida" || value === "Seleção de Campeões")
-        return "azul";
+        return "em-partida";
     else if (value === "Online") return "online";
     else if (value === "Lol+") return "lol-plus";
     else if (value === "Criando partida de TFT") return "ausente";

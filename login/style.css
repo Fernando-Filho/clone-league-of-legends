@@ -29,6 +29,14 @@ main {
     font-weight: 600;
 }
 
+#login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 32px;
+}
+
 .login-input {
     box-sizing: border-box;
     width: 100%;
@@ -109,15 +117,12 @@ main {
     margin: 2px 6px;
 }
 
-.login-button {
+.btn-login {
     display: block;
-    width: 60px;
-    height: 60px;
+    padding: 14px;
     margin: 0 auto;
-    margin-bottom: 50px;
     border-radius: 30%;
-    border-color: #ededed;
-    border-style: solid;
+    border: 2px solid #ededed;
     background-color: #fff;
 }
 
@@ -254,7 +259,7 @@ main {
     background-color: transparent !important;
 }
 
-.mensagem-erro {
+.input_MensagemErro {
     position: absolute;
     top: 85px;
     left: 40px;
@@ -272,7 +277,7 @@ main {
     /* visibility: hidden; */
 }
 
-.mensagem-erro::after {
+.input_MensagemErro::after {
     content: " ";
     position: absolute;
     top: 100%;

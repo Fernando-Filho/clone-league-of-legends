@@ -34,8 +34,8 @@
     </head>
 
     <body onselectstart="return false">
-        <main class="main d-flex">
-            <aside class="menu-filtros">
+        <main class="main d-flex campeoes">
+            <aside class="campeoes-filtros">
                 <fieldset class="text-uppercase">
                     <input type="radio" id="campeoes" checked />
                     <label for="campeoes">campeões</label>
@@ -54,19 +54,9 @@
                         id="pacotes"
                         class="links-desabilitados"
                     />
-                    <label for="eternos">eternos</label>
-                </fieldset>
-                <fieldset class="text-uppercase">
-                    <input
-                        type="radio"
-                        id="pacotes"
-                        class="links-desabilitados"
-                    />
                     <label for="pacotes">pacotes</label>
                 </fieldset>
-
-                <hr />
-
+                <hr class="m-2" />
                 <input type="search" id="input-search-champ" />
                 <fieldset>
                     <input
@@ -76,9 +66,7 @@
                     />
                     <label>Exibir habilitados</label>
                 </fieldset>
-
-                <hr />
-
+                <hr class="m-2" />
                 <select id="select-sorting-method">
                     <option value="releaseDate,desc">
                         Data de lançamento ↓
@@ -117,7 +105,7 @@
                     <input class="input-checkbox" type="checkbox" id="1" />
                     <label for="1">Tanque</label>
                 </fieldset>
-                <hr />
+                <hr class="m-2" />
                 <fieldset>
                     <input
                         class="input-checkbox-sale"
@@ -127,12 +115,12 @@
                     <label for="sale">Promoção</label>
                 </fieldset>
             </aside>
-            <section id="grid-campeoes">
-                <span class="grid-campeoes__server-message"
+            <section id="campeoes-grid"> 
+                <span class="grid-campeoes_mensagemServidor fs-6 position-absolute w-75 text-center"
                     >Certifique-se de que o servidor está conectado à API para
                     carregar as informações dos campeões ou recarregue a
-                    página</span
-                >
+                    página
+                </span>
             </section>
         </main>
         <script src="script.js"></script>

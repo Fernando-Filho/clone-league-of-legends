@@ -2,7 +2,7 @@ const usuarioCadastrado = "user10";
 const senhaCadastrada = "senhaforte55";
 const txtUsuario = document.querySelector("#txtUsuario");
 const txtSenha = document.querySelector("#txtSenha");
-const btnLogin = document.querySelector(".btn-login");
+const btnLogin = document.querySelector(".btnLogin");
 const form = document.querySelector("#login-form");
 
 function spin() {
@@ -23,17 +23,17 @@ function login() {
             location.href = "/clone-league-of-legends/loading/";
         }, 1500);
     } else {
-        const label = document.querySelectorAll(".login-input_box label");
-        const input = document.querySelectorAll(".login-input_box input");
+        const label = document.querySelectorAll(".form-input_box label");
+        const input = document.querySelectorAll(".form-input_box input");
 
-        label.forEach((lbl) => (lbl.style.color = "#c813d8"));
+        label.forEach((lbl) => (lbl.style.color = "#e806cf"));
         input.forEach(
             (txt) =>
                 (txt.style.cssText =
-                    "border: 2px solid #E7C0E8; background-color: #F3E2F4")
+                    "border: 2px solid #fec7ff; background-color: #fde1ff")
         );
 
-        form.innerHTML += `<span class="input_MensagemErro">Suas credenciais de login não coincidem com uma conta em nosso sistema.</span>`;
+        form.innerHTML += `<span class="input_MensagemErro lh-sm font_LexendDeca">Suas credenciais de login não coincidem com uma conta em nosso sistema.</span>`;
     }
 }
 

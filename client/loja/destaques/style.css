@@ -20,7 +20,7 @@ img {
     grid-template-areas:
         "carrossel carrossel carrossel . . "
         "carrossel carrossel carrossel . . "
-        "prime prime prime prime prime"
+        "primeGaming primeGaming primeGaming primeGaming primeGaming"
         "populares populares populares populares populares"
         ". . . . . "
         ". . . . . ";
@@ -89,10 +89,10 @@ p {
     font-size: 12px;
 }
 
-/* PRIME GAMING */
-.prime {
+/* primeGaming GAMING */
+.primeGaming {
     box-sizing: border-box;
-    grid-area: prime;
+    grid-area: primeGaming;
     margin-top: 10px;
     height: 70px;
     /* width: 100%; */
@@ -101,23 +101,16 @@ p {
     color: #f5f0ec;
 }
 
-.prime .prime-logo {
+.primeGaming .primeGaming-logo {
     position: relative;
     top: 0px;
     width: 200px;
     height: max-content;
 }
 
-.prime .prime-btnResgatar {
-    margin-right: 10px;
-}
-
-.prime-separador {
-    display: block;
-    height: 50%;
+.primeGaming-separador {
     width: 1px;
     background-color: #3b4352;
-    margin: 0 10px;
 }
 
 /* MAIS POPULARES */
@@ -143,19 +136,23 @@ p {
     content: "-" attr(data-percPromocao) "%";
 }
 
-.card.destaques-conjunto::before,
-.card.impacto-social::after {
+.card.destaques-conjuntos {
+    color: #fff;
+}
+
+.card.destaques-conjuntos::before,
+.card.destaques-impactoSocial::after {
     display: block;
     position: absolute;
     height: auto;
 }
 
-.card.destaques-conjunto::before {
+.card.destaques-conjuntos::before {
     content: url("../../img/loja/tempo-limitado.png");
     left: 4px;
 }
 
-.card.impacto-social::after {
+.card.destaques-impactoSocial::after {
     content: url("../../img/loja/impacto-social.png");
     right: 4px;
 }

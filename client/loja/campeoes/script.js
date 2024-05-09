@@ -27,9 +27,11 @@ function constroiURL() {
     let name = document.getElementById("input-search-champ").value;
     let filtersRole = [];
     for (let i = 0; i < 6; i++) {
-        if (document.querySelectorAll(".input-checkbox")[i].checked) {
+        if (
+            document.querySelectorAll(".form-checkbox_manterLogin")[i].checked
+        ) {
             filtersRole.push(
-                document.querySelectorAll(".input-checkbox")[i].id
+                document.querySelectorAll(".form-checkbox_manterLogin")[i].id
             );
         }
     }
@@ -98,15 +100,17 @@ async function carregarChamps() {
     });
 }
 
-let elementsTriggerEventCheckbox =
-    document.getElementsByClassName("input-checkbox");
+let elementsTriggerEventCheckbox = document.getElementsByClassName(
+    "form-checkbox_manterLogin"
+);
 
 for (let i = 0; i < elementsTriggerEventCheckbox.length; i++) {
     elementsTriggerEventCheckbox[i].addEventListener("click", carregarChamps);
 }
 
-let elementsTriggerEventCheckbox =
-    document.getElementsByClassName("input-checkbox");
+let elementsTriggerEventCheckbox = document.getElementsByClassName(
+    "form-checkbox_manterLogin"
+);
 
 for (let i = 0; i < elementsTriggerEventCheckbox.length; i++) {
     elementsTriggerEventCheckbox[i].addEventListener("click", carregarChamps);

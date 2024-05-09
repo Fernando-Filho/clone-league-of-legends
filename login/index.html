@@ -34,10 +34,10 @@
     </head>
 
     <body>
-        <main class="">
+        <main class="position-relative d-flex m-auto">
             <section
                 id="login"
-                class="d-flex flex-column justify-content-between"
+                class="d-flex flex-column justify-content-between w-100 bg-white"
             >
                 <div>
                     <img
@@ -45,52 +45,61 @@
                         src="./img/riot-logo.png"
                         alt="Riot Games logo"
                     />
-                    <form id="login-form">
+                    <form
+                        id="login-form"
+                        class="d-flex flex-column justify-content-between h-100 pb-"
+                    >
                         <div>
-                            <h4 class="text-center login-header">
+                            <h4
+                                class="text-center fw-semibold mb-4 font_LexendDeca"
+                            >
                                 Fazer login
                             </h4>
-                            <div class="login-input_box">
+                            <div class="form-input_box w-100 position-relative">
                                 <input
                                     id="txtUsuario"
-                                    class="login-input"
+                                    class="form-input"
                                     type="text"
                                     required
                                 />
                                 <label
                                     for="txtUsuario"
-                                    class="text-uppercase lblUsuario"
+                                    class="text-uppercase lblUsuario position-absolute fw-bold form-label"
                                     >nome de usuário</label
                                 >
                             </div>
 
-                            <div class="login-input_box">
+                            <div class="form-input_box w-100 position-relative">
                                 <input
                                     id="txtSenha"
-                                    class="login-input"
+                                    class="form-input"
                                     type="password"
                                     required
                                 />
                                 <label
                                     for="txtSenha"
-                                    class="text-uppercase lblSenha"
+                                    class="text-uppercase lblSenha position-absolute fw-bold form-label"
                                     >senha</label
                                 >
                             </div>
 
                             <div
-                                class="d-flex justify-content-between mb-2 login-buttons"
+                                class="d-flex justify-content-between mb-2 login-btnRedes"
                             >
-                                <button class="links-desabilitados">
+                                <button
+                                    class="links-desabilitados login-buttons_facebook"
+                                >
                                     <i
-                                        class="fab fa fa-facebook fa-inverse"
+                                        class="fa fa-facebook fa-inverse"
                                         aria-hidden="true"
                                     ></i
                                     ><span class="sr-only"
                                         >Fazer login com o Facebook</span
                                     >
                                 </button>
-                                <button class="links-desabilitados">
+                                <button
+                                    class="links-desabilitados bg-white border border-2 border-light"
+                                >
                                     <img
                                         height="14"
                                         src="./img/google-icon.png"
@@ -100,7 +109,7 @@
                                         >Fazer login com o Google</span
                                     >
                                 </button>
-                                <button class="links-desabilitados">
+                                <button class="links-desabilitados bg-black">
                                     <i
                                         class="fab fa fa-apple fa-inverse"
                                         aria-hidden="true"
@@ -113,7 +122,7 @@
 
                             <fieldset class="d-flex align-items-center">
                                 <input
-                                    class="input-checkbox"
+                                    class="form-checkbox_manterLogin"
                                     type="checkbox"
                                     id="checkbox"
                                 />
@@ -122,7 +131,7 @@
                         </div>
                         <button
                             type="submit"
-                            class="btn-login"
+                            class="btnLogin"
                             disabled="true"
                             onclick="login();return false"
                         >
@@ -134,16 +143,12 @@
                         </button>
                     </form>
                 </div>
-                <div style="text-align: center">
-                    <a
-                        class="links-desabilitados text-uppercase login-links"
-                        href="#"
+                <div class="text-center text-uppercase">
+                    <a class="links-desabilitados login-links" href="#"
                         >não consegue iniciar sessão?</a
                     >
                     <br />
-                    <a
-                        class="links-desabilitados text-uppercase login-links"
-                        href="#"
+                    <a class="links-desabilitados login-links" href="#"
                         >criar conta</a
                     >
                 </div>
@@ -151,8 +156,8 @@
 
             <section id="wallpaper">
                 <header class="position-relative">
-                    <div class="btn-avisos_wrapper">
-                        <button class="avisos start-0">
+                    <div class="btn-tooltip-avisos_wrapper">
+                        <button class="tooltip_avisos start-0">
                             <img
                                 width="42"
                                 height="42"
@@ -160,23 +165,33 @@
                                 alt=""
                             />
                         </button>
-                        <div class="avisos-texto position-absolute">
-                            <h6>Transferências de conta indisponíveis</h6>
+                        <div
+                            class="tooltip-avisos_wrapper position-absolute font_LexendDeca"
+                        >
+                            <h6 class="fw-semibold mb-2">
+                                Transferências de conta indisponíveis
+                            </h6>
                             <span
-                                ><i class="fa fa-clock" aria-hidden="true"></i
+                                ><i
+                                    class="fa fa-clock-o me-1"
+                                    aria-hidden="true"
+                                ></i
                                 >22/09/2021 13:49</span
                             >
-                            <p>
+                            <p class="mb-3 lh-sm">
                                 As transferências de conta estao indisponíveis
                                 enquanto trabalhamos na solução de um problema.
                             </p>
-                            <h6>Presentes</h6>
+                            <h6 class="fw-semibold mb-2">Presentes</h6>
 
                             <span
-                                ><i class="fa fa-clock" aria-hidden="true"></i>
-                                15/05/2021 19:03</span
+                                ><i
+                                    class="fa fa-clock-o me-1"
+                                    aria-hidden="true"
+                                ></i
+                                >12/05/2021 19:03</span
                             >
-                            <p>
+                            <p class="mb-4 lh-sm">
                                 Presentes de conteúdo (campeões, skins, etc)
                                 estão temporariamente indisponíveis enquanto
                                 trabalhamos na solução de um problema. Presentes
@@ -192,11 +207,10 @@
                     </div>
 
                     <div
-                        class="btn-group dropstart position-absolute menu-main"
+                        class="btn-group dropstart position-absolute menuSuspenso"
                     >
                         <button
                             type="button"
-                            class="menu-btn"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >

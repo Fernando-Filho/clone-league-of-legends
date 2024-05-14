@@ -37,10 +37,10 @@ function abrir_inicio() {
     header.innerHTML = `
     <nav>
         <ul class="d-flex gap-4 text-uppercase">
-            <li class="links-desabilitados">visão geral</li>
+            <li class="desabilitado">visão geral</li>
             <li style="cursor: pointer;">outro céu</li>
-            <li class="links-desabilitados">cblol esports</li>
-            <li class="links-desabilitados">notas de atualização</li>
+            <li class="desabilitado">cblol esports</li>
+            <li class="desabilitado">notas de atualização</li>
         </ul>
         </nav>`;
     listaClasses.add("header-inicio");
@@ -112,7 +112,9 @@ async function carregarSocial() {
                 value.img
             } alt="Ícone do invocador">
             <div>
-            <p class="pastas-invocador_nome" style="color: #929994;">${value.name}</p>
+            <p class="pastas-invocador_nome" style="color: #929994;">${
+                value.name
+            }</p>
         <p class="status ${statusCor(value.status)}">${value.status}</p>
                     </div>
                 </li>`;
@@ -125,7 +127,7 @@ async function carregarSocial() {
 
             wrapper.innerHTML += `
                  <button class="btn text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#${nomepasta}">${key} (${value.length}/${value.length})</button>
-            <div class="collapse multi-collapse" id="${nomepasta}">
+            <div class="collapse multi-collapse show" id="${nomepasta}">
                     <ul></ul>
                 </div>`;
 
@@ -139,16 +141,16 @@ const textoNav = () => {
         <ul class="d-flex gap-4 text-uppercase">
            <li style="cursor: pointer;" onclick="abrir_loja()">destaques</li>
         <li style="cursor: pointer;" onclick="abrir_loja_campeoes()">campeões</li>
-            <li class="links-desabilitados">skins</li>
-            <li class="links-desabilitados">tft</li>
-            <li class="links-desabilitados">espólios</li>
-            <li class="links-desabilitados">acessórios</li>
+            <li class="desabilitado">skins</li>
+            <li class="desabilitado">tft</li>
+            <li class="desabilitado">espólios</li>
+            <li class="desabilitado">acessórios</li>
         </ul>
     </nav>
     <div class="d-flex gap-3 header-destaques-botoes">
-        <button class="links-desabilitados">COMPRE RP</button>
-        <button class="links-desabilitados"><img src="./img/loja/presentes-icone.svg" alt="Dar presente"></button>
-        <button class="links-desabilitados"><img src="./img/loja/configuracoes-icone.svg" alt="Configurações"></button>
+        <button class="desabilitado text-uppercase">Compre RP</button>
+        <button class="desabilitado"><img src="./img/loja/presentes-icone.svg" alt="Dar presente"></button>
+        <button class="desabilitado"><img src="./img/loja/configuracoes-icone.svg" alt="Configurações"></button>
     </div>`;
 };
 

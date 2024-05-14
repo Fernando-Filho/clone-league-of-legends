@@ -28,10 +28,10 @@ function constroiURL() {
     let filtersRole = [];
     for (let i = 0; i < 6; i++) {
         if (
-            document.querySelectorAll(".form-checkbox_manterLogin")[i].checked
+            document.querySelectorAll(".campeoes-filtros-checkbox")[i].checked
         ) {
             filtersRole.push(
-                document.querySelectorAll(".form-checkbox_manterLogin")[i].id
+                document.querySelectorAll(".campeoes-filtros-checkbox")[i].id
             );
         }
     }
@@ -88,7 +88,7 @@ async function carregarChamps() {
     divChamps.innerHTML = "";
     data.forEach((champ) => {
         divChamps.innerHTML += `<div class="card">
-                                    <img src="${champ.image}" width="240" height="240" alt="${champ.name}">
+                                    <img src="${champ.image}" class="w-100 h-100" width="240" height="240" alt="${champ.name}">
                                     <div class="card-sombraTitulo position-absolute d-flex align-items-center justify-content-end flex-column">
                                         <p class=" text-capitalize">${champ.name}</p>
                                         <span id="card-precos">
@@ -101,15 +101,7 @@ async function carregarChamps() {
 }
 
 let elementsTriggerEventCheckbox = document.getElementsByClassName(
-    "form-checkbox_manterLogin"
-);
-
-for (let i = 0; i < elementsTriggerEventCheckbox.length; i++) {
-    elementsTriggerEventCheckbox[i].addEventListener("click", carregarChamps);
-}
-
-let elementsTriggerEventCheckbox = document.getElementsByClassName(
-    "form-checkbox_manterLogin"
+    "campeoes-filtros-checkbox"
 );
 
 for (let i = 0; i < elementsTriggerEventCheckbox.length; i++) {

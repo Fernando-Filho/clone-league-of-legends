@@ -258,12 +258,12 @@ main {
     z-index: 4;
 }
 
-.spinner-border {
+.spin-border {
     height: 3rem;
     width: 3rem;
     border-right-color: #d13639;
 }
 
-.links-desabilitados {
+.desabilitado {
     cursor: not-allowed !important;
 }

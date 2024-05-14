@@ -54,11 +54,11 @@ input,
 card,
 p:not(.rp, .essencia-azul, .social_titulo),
 label {
-    font-family: "Lexend Deca", sans-serif;
+    font-family: "Siegel Sans", sans-serif;
     font-weight: 600;
     margin: 0;
 }
 
 .font_LexendDeca {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: "Siegel Sans", sans-serif;
 }

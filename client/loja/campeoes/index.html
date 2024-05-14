@@ -21,12 +21,6 @@
             crossorigin="anonymous"
         />
 
-        <!-- FONT AWESOME -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-
         <!-- CSS -->
         <link rel="stylesheet" href="../../../client/style.css" />
         <link rel="stylesheet" href="style.css" />
@@ -35,35 +29,23 @@
 
     <body onselectstart="return false">
         <main class="main d-flex campeoes">
-            <aside class="campeoes-filtros">
+            <aside class="campeoes-filtros pt-3 ps-4 w-100 bg-transparent">
                 <fieldset class="text-uppercase">
                     <input type="radio" id="campeoes" checked />
                     <label for="campeoes">campeões</label>
                 </fieldset>
                 <fieldset class="text-uppercase">
-                    <input
-                        type="radio"
-                        id="eternos"
-                        class="links-desabilitados"
-                    />
+                    <input type="radio" id="eternos" class="desabilitado" />
                     <label for="eternos">eternos</label>
                 </fieldset>
                 <fieldset class="text-uppercase">
-                    <input
-                        type="radio"
-                        id="pacotes"
-                        class="links-desabilitados"
-                    />
+                    <input type="radio" id="pacotes" class="desabilitado" />
                     <label for="pacotes">pacotes</label>
                 </fieldset>
                 <hr class="m-2" />
                 <input type="search" id="input-search-champ" />
                 <fieldset>
-                    <input
-                        class="form-checkbox_manterLogin-habilitados links-desabilitados"
-                        type="checkbox"
-                        disabled
-                    />
+                    <input class="desabilitado" type="checkbox" disabled />
                     <label>Exibir habilitados</label>
                 </fieldset>
                 <hr class="m-2" />
@@ -83,7 +65,7 @@
                 </select>
                 <fieldset>
                     <input
-                        class="form-checkbox_manterLogin"
+                        class="campeoes-filtros-checkbox"
                         type="checkbox"
                         id="4"
                     />
@@ -91,7 +73,7 @@
                 </fieldset>
                 <fieldset>
                     <input
-                        class="form-checkbox_manterLogin"
+                        class="campeoes-filtros-checkbox"
                         type="checkbox"
                         id="6"
                     />
@@ -99,7 +81,7 @@
                 </fieldset>
                 <fieldset>
                     <input
-                        class="form-checkbox_manterLogin"
+                        class="campeoes-filtros-checkbox"
                         type="checkbox"
                         id="3"
                     />
@@ -107,7 +89,7 @@
                 </fieldset>
                 <fieldset>
                     <input
-                        class="form-checkbox_manterLogin"
+                        class="campeoes-filtros-checkbox"
                         type="checkbox"
                         id="5"
                     />
@@ -115,7 +97,7 @@
                 </fieldset>
                 <fieldset>
                     <input
-                        class="form-checkbox_manterLogin"
+                        class="campeoes-filtros-checkbox"
                         type="checkbox"
                         id="2"
                     />
@@ -123,7 +105,7 @@
                 </fieldset>
                 <fieldset>
                     <input
-                        class="form-checkbox_manterLogin"
+                        class="campeoes-filtros-checkbox"
                         type="checkbox"
                         id="1"
                     />
@@ -132,7 +114,7 @@
                 <hr class="m-2" />
                 <fieldset>
                     <input
-                        class="form-checkbox_manterLogin-sale"
+                        class="campeoes-filtros-checkbox"
                         type="checkbox"
                         id="sale"
                     />

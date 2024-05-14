@@ -6,7 +6,7 @@ const btnLogin = document.querySelector(".btnLogin");
 const form = document.querySelector("#login-form");
 
 function spin() {
-    form.innerHTML += `<div class="spin"><div heigth="40" weight="40" class="spinner-border" role="status"></div></div>`;
+    form.innerHTML += `<div class="spin"><div heigth="40" weight="40" class="spin-border" role="status"></div></div>`;
     setTimeout(() => {
         document.querySelector(".spin").style.visibility = "hidden";
     }, 1500);

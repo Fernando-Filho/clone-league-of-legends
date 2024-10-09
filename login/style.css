@@ -4,21 +4,29 @@
 main {
     position: relative;
     display: flex;
+    flex-direction: row;
     width: 1024px;
     height: 576px;
     margin: auto;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.4)
 }
 
 /* LOGIN */
 #login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 360px;
     padding: 40px;
+    border-radius: 5px 0px 0px 5px;
     background-color: #fff;
 }
 
 .login-logo {
-    display: block;
+    /* display: block; */
     width: 90px;
     height: auto;
     margin: 0 auto 50px;
@@ -92,6 +100,7 @@ main {
     margin-right: 6px;
     border-radius: 3px;
     background-color: #ededed;
+    cursor: pointer;
 }
 
 .input-checkbox:checked {
@@ -132,6 +141,7 @@ main {
     background: url("https://live.staticflickr.com/65535/52277003139_a23861ad0a_k.jpg")
         no-repeat;
     background-size: cover;
+    border-radius: 0px 5px 5px 0px;
     background-position: 40%;
 }
 
